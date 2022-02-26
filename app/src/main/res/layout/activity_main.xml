@@ -7,14 +7,15 @@
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:layout_height="match_parent">
 
         <fragment
             android:id="@+id/welcomeScreenFragment"
-            android:name="com.example.soccerquiz.QuizFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:navGraph="@navigation/app_navigation"
+            app:defaultNavHost="true">
 
         </fragment>
     </LinearLayout>
