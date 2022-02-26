@@ -12,7 +12,7 @@
 
         <fragment
             android:id="@+id/welcomeScreenFragment"
-            android:name="com.example.soccerquiz.WelcomeScreenFragment"
+            android:name="com.example.soccerquiz.QuizFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
