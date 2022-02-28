@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import com.example.soccerquiz.databinding.FragmentMissBinding
 import com.example.soccerquiz.databinding.FragmentWelcomeScreenBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -35,7 +36,7 @@ class MissFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: FragmentWelcomeScreenBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_miss, container, false)
+        val binding: FragmentMissBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_miss, container, false)
         return binding.root
     }
 

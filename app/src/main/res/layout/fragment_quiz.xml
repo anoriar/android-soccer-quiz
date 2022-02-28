@@ -87,21 +87,21 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView2" >
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/firstRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@{quizFragment.answers[0]}"
                     tools:text="First answer"/>
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/secondRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@{quizFragment.answers[1]}"
                     tools:text="Second answer"/>
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/thirdRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@{quizFragment.answers[2]}"
@@ -110,7 +110,7 @@
 
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/passButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"

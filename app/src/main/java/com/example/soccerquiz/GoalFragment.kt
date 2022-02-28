@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import com.example.soccerquiz.databinding.FragmentGoalBinding
 import com.example.soccerquiz.databinding.FragmentWelcomeScreenBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -36,7 +37,7 @@ class GoalFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding: FragmentWelcomeScreenBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_goal, container, false)
+        val binding: FragmentGoalBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_goal, container, false)
         return binding.root
     }
 
