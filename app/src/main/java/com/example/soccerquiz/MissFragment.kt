@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.example.soccerquiz.databinding.FragmentMissBinding
 import com.example.soccerquiz.databinding.FragmentWelcomeScreenBinding
 
@@ -37,6 +38,10 @@ class MissFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding: FragmentMissBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_miss, container, false)
+
+        binding.oneMoreTimeButton.setOnClickListener { view: View ->
+            Navigation.findNavController(view).navigate(R.id.action_missFragment_to_quizFragment)
+        }
         return binding.root
     }
 

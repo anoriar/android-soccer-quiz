@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.example.soccerquiz.databinding.FragmentGoalBinding
 import com.example.soccerquiz.databinding.FragmentWelcomeScreenBinding
 
@@ -38,6 +39,9 @@ class GoalFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val binding: FragmentGoalBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_goal, container, false)
+        binding.oneMoreTimeButton.setOnClickListener { view: View ->
+            Navigation.findNavController(view).navigate(R.id.action_goalFragment_to_quizFragment)
+        }
         return binding.root
     }
 
