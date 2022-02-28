@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import com.example.soccerquiz.databinding.FragmentWelcomeScreenBinding
@@ -40,6 +41,8 @@ class WelcomeScreenFragment : Fragment() {
         binding.button.setOnClickListener({ view: View ->
             Navigation.findNavController(view).navigate(R.id.action_welcomeScreenFragment3_to_quizFragment)
         })
+
+        (activity as AppCompatActivity).supportActionBar?.title = "Soccer Quiz"
         // Inflate the layout for this fragment
         return binding.root
     }

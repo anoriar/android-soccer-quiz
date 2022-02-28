@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import com.example.soccerquiz.databinding.FragmentMissBinding
@@ -42,6 +43,9 @@ class MissFragment : Fragment() {
         binding.oneMoreTimeButton.setOnClickListener { view: View ->
             Navigation.findNavController(view).navigate(R.id.action_missFragment_to_quizFragment)
         }
+
+        (activity as AppCompatActivity).supportActionBar?.title = "Soccer Quiz"
+
         return binding.root
     }
 
