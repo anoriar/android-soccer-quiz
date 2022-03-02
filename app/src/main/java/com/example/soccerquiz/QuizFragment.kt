@@ -1,14 +1,19 @@
 package com.example.soccerquiz
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.*
-import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.soccerquiz.databinding.FragmentQuizBinding
+import java.util.*
+import kotlin.concurrent.schedule
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -126,11 +131,22 @@ class QuizFragment : Fragment() {
 
 //                        Обновляет разметку в соответствии с переменными
                         binding.invalidateAll()
-                    }else{
-                        Navigation.findNavController(view).navigate(R.id.action_quizFragment_to_goalFragment)
+                    } else {
+                        binding.ballImageView.animate().translationXBy(800f)
+                            .rotation(3600f).duration = 3000
+                        Handler().postDelayed({
+                            Navigation.findNavController(view)
+                                .navigate(R.id.action_quizFragment_to_goalFragment)
+                        }, 3000)
+
                     }
-                }else{
-                    Navigation.findNavController(view).navigate(R.id.action_quizFragment_to_missFragment)
+                } else {
+                    binding.ballImageView.animate().translationXBy(800f)
+                        .rotation(3600f).duration = 3000
+                    Handler().postDelayed({
+                        Navigation.findNavController(view)
+                            .navigate(R.id.action_quizFragment_to_missFragment)
+                    }, 3000)
                 }
             }
         }
@@ -143,6 +159,7 @@ class QuizFragment : Fragment() {
 
         return binding.root
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
@@ -182,7 +199,7 @@ class QuizFragment : Fragment() {
         setQuizItem()
     }
 
-    private fun setQuizItem(){
+    private fun setQuizItem() {
         currentQuizItem = quizItems[quizItemIndex]
         answers = currentQuizItem.answerList.toMutableList()
         answers.shuffle()
