@@ -2,6 +2,7 @@ package com.example.soccerquiz
 
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -134,7 +135,7 @@ class QuizFragment : Fragment() {
                     } else {
                         binding.ballImageView.animate().translationXBy(800f)
                             .rotation(3600f).duration = 3000
-                        Handler().postDelayed({
+                        Handler(Looper.getMainLooper()).postDelayed({
                             Navigation.findNavController(view)
                                 .navigate(R.id.action_quizFragment_to_goalFragment)
                         }, 3000)
@@ -143,7 +144,7 @@ class QuizFragment : Fragment() {
                 } else {
                     binding.ballImageView.animate().translationXBy(800f)
                         .rotation(3600f).duration = 3000
-                    Handler().postDelayed({
+                    Handler(Looper.getMainLooper()).postDelayed({
                         Navigation.findNavController(view)
                             .navigate(R.id.action_quizFragment_to_missFragment)
                     }, 3000)
