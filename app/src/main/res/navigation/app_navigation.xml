@@ -11,7 +11,11 @@
         tools:layout="@layout/fragment_welcome_screen" >
         <action
             android:id="@+id/action_welcomeScreenFragment3_to_quizFragment"
-            app:destination="@id/quizFragment" />
+            app:destination="@id/quizFragment"
+            app:enterAnim="@anim/slide_in_left_anim"
+            app:exitAnim="@anim/slide_out_right_anim"
+            app:popEnterAnim="@anim/slide_in_right_anim"
+            app:popExitAnim="@anim/slide_out_left_anim"/>
     </fragment>
     <fragment
         android:id="@+id/quizFragment"
@@ -25,7 +29,11 @@
         <action
             android:id="@+id/action_quizFragment_to_missFragment"
             app:destination="@id/missFragment"
-            app:popUpTo="@id/welcomeScreenFragment3" />
+            app:popUpTo="@id/welcomeScreenFragment3"
+            app:enterAnim="@anim/slide_in_left_anim"
+            app:exitAnim="@anim/slide_out_right_anim"
+            app:popEnterAnim="@anim/slide_in_right_anim"
+            app:popExitAnim="@anim/slide_out_left_anim"/>
     </fragment>
     <fragment
         android:id="@+id/goalFragment"
@@ -35,7 +43,11 @@
         <action
             android:id="@+id/action_goalFragment_to_quizFragment"
             app:destination="@id/quizFragment"
-            app:popUpTo="@id/welcomeScreenFragment3" />
+            app:popUpTo="@id/welcomeScreenFragment3"
+            app:enterAnim="@anim/slide_in_left_anim"
+            app:exitAnim="@anim/slide_out_right_anim"
+            app:popEnterAnim="@anim/slide_in_right_anim"
+            app:popExitAnim="@anim/slide_out_left_anim"/>
     </fragment>
     <fragment
         android:id="@+id/missFragment"
@@ -45,7 +57,11 @@
         <action
             android:id="@+id/action_missFragment_to_quizFragment"
             app:destination="@id/quizFragment"
-            app:popUpTo="@id/welcomeScreenFragment3" />
+            app:popUpTo="@id/welcomeScreenFragment3"
+            app:enterAnim="@anim/fade_in_anim"
+            app:exitAnim="@anim/fade_out_anim"
+            app:popEnterAnim="@anim/slide_in_left_anim"
+            app:popExitAnim="@anim/slide_in_right_anim"/>
     </fragment>
     <fragment
         android:id="@+id/rulesFragment"
